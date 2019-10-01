@@ -59,7 +59,7 @@ resource "aws_s3_bucket_policy" "prisma" {
             "Effect": "Allow",
             "Principal": { "Service": "cloudtrail.amazonaws.com" },
             "Action": "s3:PutObject",
-            "Resource":  "${aws_s3_bucket.prisma.arn}/redlock/AWSLogs/${data.aws_caller_identity.current.account_id}/*",
+            "Resource":  "${aws_s3_bucket.prisma.arn}/AWSLogs/${data.aws_caller_identity.current.account_id}/*",
             "Condition": {
                 "StringEquals": {
                     "s3:x-amz-acl": "bucket-owner-full-control"
@@ -93,7 +93,6 @@ resource "aws_cloudtrail" "prisma" {
   name                          = "awc-nit-cloudtrail-Prisma"
   enable_logging                = true
   s3_bucket_name                = "${aws_s3_bucket.prisma.id}"
-  s3_key_prefix                 = "redlock"
   include_global_service_events = true
   event_selector {
     read_write_type           = "All"
