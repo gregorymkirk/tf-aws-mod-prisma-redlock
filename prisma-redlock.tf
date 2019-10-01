@@ -2,7 +2,7 @@
 
 resource "aws_iam_role" "prisma_cloud" {
   name               = "awc-nit-iam-role-Prisma"
-  assume_role_policy = templatefile("${path.module}/policies/PrismaCloud-IAM-AssumeRole.json", { EXTERNALID = random_uuid.externalid.result })
+  assume_role_policy = templatefile("${path.module}/policies/PrismaCloud-IAM-AssumeRole.json", { EXTERNALID = "${random_uuid.externalid.result}" })
   path               = "/core/"
 }
 
