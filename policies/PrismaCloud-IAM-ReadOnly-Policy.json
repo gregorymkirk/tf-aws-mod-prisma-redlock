@@ -1,0 +1,25 @@
+{
+"Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": [
+        "apigateway:GET",
+        "cognito-identity:ListTagsForResource",
+        "cognito-idp:ListTagsForResource",
+        "elasticbeanstalk:ListTagsForResource",
+        "elasticfilesystem:DescribeTags",
+        "glacier:GetVaultLock",
+        "glacier:ListTagsForVault",
+        "logs:GetLogEvents",
+        "secretsmanager:DescribeSecret",
+        "ssm:GetParameters",
+        "ssm:ListTagsForResource",
+        "sqs:SendMessage",
+        "elasticmapreduce:ListSecurityConfigurations",
+        "sns:listSubscriptions"
+      ],
+      "Effect": "Allow",
+      "Resource": "*"
+    }
+  ]
+}
