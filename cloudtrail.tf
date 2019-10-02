@@ -90,6 +90,7 @@ resource "aws_iam_role_policy_attachment" "prisma-cloudtrail" {
 }
 
 resource "aws_cloudtrail" "prisma" {
+  depends_on = [ aws_s3_bucket_policy.prisma ]
   name                          = "awc-nit-cloudtrail-Prisma"
   enable_logging                = true
   s3_bucket_name                = "${aws_s3_bucket.prisma.id}"
