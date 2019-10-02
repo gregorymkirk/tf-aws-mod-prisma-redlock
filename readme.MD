@@ -40,4 +40,4 @@ module "prisma" {
 
 Author: Gregory Kirk
 Contact: gkirk@smartronix.com
-v 0.1 : initial working versin 02OCT2019
+v 0.1 : initial working version 02OCT2019
