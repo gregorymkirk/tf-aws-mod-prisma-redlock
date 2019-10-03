@@ -10,3 +10,7 @@ data "aws_caller_identity" "current" {}
 
 #generating a randome UUID to use as the external ID for the Prisma role
 resource "random_uuid" "externalid" {}
+
+
+#get the acount alist to add to the outputs for ease of onboarding
+data "aws_iam_account_alias" "current" {}
