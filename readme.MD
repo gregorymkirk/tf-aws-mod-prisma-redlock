@@ -6,7 +6,7 @@ This module implements all the configuration steps at (including those perfromed
 
 (https://docs.paloaltonetworks.com/prisma/prisma-cloud/prisma-cloud-admin/connect-your-cloud-platform-to-prisma-cloud/onboard-your-aws-account/set-up-your-aws-account#)
 
-This moduled can be used to speed and simplify the Prisma onboarding process, and can be integrated with account provisiining steps to ensure that the account can be onboarded at launch.
+This module can be used to speed and simplify the Prisma onboarding process, and can be integrated with account provisioning steps to ensure that the account can be onboarded at launch.
 
 ##Usage Instructions and Sample Code:
 
@@ -39,5 +39,5 @@ module "prisma" {
 ##Author and revision history
 
 Author: Gregory Kirk
-Contact: gkirk@smartronix.com
+Contact: 
 v 0.1 : initial working version 02OCT2019
